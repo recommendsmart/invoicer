@@ -340,7 +340,7 @@ class Invoice extends ContentEntityBase implements InvoiceInterface {
       ->setDisplayConfigurable('view', TRUE);
 
     $fields['gst'] = BaseFieldDefinition::create('decimal')
-      ->setLabel(t('VAT'))
+      ->setLabel(t('GST'))
       ->setSettings(['precision' => 32, 'scale' => 2])
       ->setDisplayOptions('form', [
         'label' => 'above',

@@ -82,7 +82,7 @@ class InvoiceListBuilder extends EntityListBuilder {
     $build = parent::render();
 
     $formBuilder = \Drupal::getContainer()->get('form_builder');
-    $build['filters'] = $formBuilder->getForm('Drupal\invoicer\Form\InvoicerInvoiceFilterForm');
+    $build['filters'] = $formBuilder->getForm('Drupal\invoicer\Form\InvoicerFilterForm');
     $build['filters']['#weight'] = '-10';
     $build['table']['#rows'][] = [
       '',

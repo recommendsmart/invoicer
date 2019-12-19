@@ -1,11 +1,11 @@
-.invoicer-invoice-filter-form .form-type-select,
-.invoicer-invoice-filter-form .form-type-textfield,
-.invoicer-invoice-filter-form .form-actions {
+.invoicer-filter-form .form-type-select,
+.invoicer-filter-form .form-type-textfield,
+.invoicer-filter-form .form-actions {
     display: table-cell;
     vertical-align: bottom;
     padding: 5px;
 }
 
-.invoicer-invoice-filter-form  fieldset {
+.invoicer-filter-form  fieldset {
     display: table;
 }
