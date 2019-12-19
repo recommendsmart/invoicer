@@ -44,7 +44,7 @@ class InvoiceListBuilder extends EntityListBuilder {
     $header['date'] = $this->t('Date');
     $header['Number'] = $this->t('Number');
     $header['name'] = $this->t('Name');
-    $header['client_name'] = $this->t('Client name');
+    $header['customer_name'] = $this->t('Customer name');
     $header['sub_total'] = $this->t('Subtotal price');
     $header['total'] = $this->t('Total price');
     return $header + parent::buildHeader();
