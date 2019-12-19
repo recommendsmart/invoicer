@@ -1,0 +1,19 @@
+invoice_list:
+  version: 1.x
+  css:
+    theme:
+      css/InvoiceList.css: {}
+
+invoice_form:
+  version: 1.x
+  js:
+    js/InvoiceForm.js: {}
+  css:
+    theme:
+      css/InvoiceForm.css: {}
+
+invoice_view:
+  version: 1.x
+  css:
+    theme:
+      css/InvoiceView.css: {}

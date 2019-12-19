@@ -1,0 +1,29 @@
+{{ attach_library('invoicer/invoice_view') }}
+<div{{ attributes.addClass('invoice') }}>
+    <div class="control">
+        <div class="date">{{ element.date }}</div>
+        <div class="series">{{ element.series }}</div>
+        <div class="number">{{ element.number }}</div>
+        <div class="is-payed">{{ element.status }}</div>
+    </div>
+    <div class="clearfix">
+        <div class="group customer">
+            <h2>Customer</h2>
+            <div class="id">{{ element.customer_id }}</div>
+            <div class="name">{{ element.customer_name }}</div>
+            <div class="address">{{ element.customer_address }}</div>
+        </div>
+        <div class="group provider">
+            <h2>Provider</h2>
+            <div class="id">{{ element.provider_id }}</div>
+            <div class="name">{{ element.provider_name }}</div>
+            <div class="address">{{ element.provider_address }}</div>
+        </div>
+    </div>
+    <div class="clearfix">{{ element.field_items }}</div>
+    <div class="clearfix">
+        <div class="sub_total">{{ element.sub_total }}</div>
+        <div class="total">{{ element.total }}</div>
+    </div>
+    {{ element.comments }}
+</div>

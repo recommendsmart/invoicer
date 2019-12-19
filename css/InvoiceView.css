@@ -1,0 +1,57 @@
+.group.customer {
+  width: 45%;
+  float: left;
+}
+
+.group.provider {
+  width: 45%;
+  float: right;
+}
+
+.field--type-line-item {
+  clear: both;
+  width: 100%;
+}
+
+.field--type-line-item .form-item {
+  float: left;
+}
+
+.field--type-line-item .form-item .form-number {
+  width: 5rem;
+}
+
+.field--type-line-item .form-item .form-number.quantity {
+  width: 4rem;
+}
+
+
+#edit-abstract {
+  clear: both;
+}
+
+#edit-abstract div.form-wrapper {
+  float: left;
+}
+
+.sub_total {
+  float: left;
+}
+
+.total {
+  float: left;
+}
+
+@media print {
+  .breadcrumb {
+    display: none;
+  }
+
+  .tabs {
+    display: none;
+  }
+
+  .block-page-title-block .field__label {
+    display: none;
+  }
+}

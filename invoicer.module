@@ -1,0 +1,36 @@
+<?php
+
+/**
+ * @file
+ * Contains invoicer.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function invoicer_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the invoicer module.
+    case 'help.page.invoicer':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Base data structure for Invoices.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function invoicer_theme() {
+  return [
+    'invoice' => [
+      'template' => 'invoicer',
+      'render element' => 'element',
+    ],
+  ];
+}

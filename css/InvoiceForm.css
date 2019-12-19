@@ -1,0 +1,35 @@
+#edit-provider {
+  width: 45%;
+  float: right;
+}
+
+#edit-customer {
+  width: 45%;
+  float: left;
+}
+
+.field--type-line-item {
+  clear: both;
+  width: 100%;
+}
+
+.field--type-line-item .form-item {
+  float: left;
+}
+
+.field--type-line-item .form-item .form-number {
+  width: 5rem;
+}
+
+.field--type-line-item .form-item .form-number.quantity {
+  width: 4rem;
+}
+
+
+#edit-abstract {
+  clear: both;
+}
+
+#edit-abstract div.form-wrapper {
+  float: left;
+}

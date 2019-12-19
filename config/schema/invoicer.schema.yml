@@ -1,0 +1,12 @@
+invoicer.settings:
+  type: config_object
+  label: 'Invoicer config.'
+  mapping:
+    gst_types:
+      mapping:
+        value:
+          type: Integer
+          label: 'The GST to apply'
+        value_label:
+          type: string
+          label: 'Text to show'

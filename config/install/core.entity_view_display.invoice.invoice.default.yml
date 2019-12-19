@@ -1,0 +1,161 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.invoice.invoice.field_items
+  module:
+    - datetime
+    - invoicer
+_core:
+  default_config_hash:
+id: invoice.invoice.default
+targetEntityType: invoice
+bundle: invoice
+mode: default
+content:
+  comments:
+    type: basic_string
+    weight: 14
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  customer_address:
+    label: above
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  customer_id:
+    label: above
+    weight: 4
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  customer_name:
+    label: above
+    weight: 5
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  date:
+    label: above
+    type: datetime_default
+    weight: 2
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    region: content
+  field_items:
+    type: line_item_formatter
+    weight: 13
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  name:
+    label: above
+    type: string
+    weight: 1
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+  number:
+    label: above
+    weight: 3
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  provider_address:
+    label: above
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  provider_id:
+    label: above
+    weight: 7
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  provider_name:
+    label: above
+    weight: 8
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  series:
+    label: above
+    weight: 0
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  series:
+    label: above
+    weight: 0
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  status:
+    label: above
+    weight: 0
+    region: content
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+  sub_total:
+    label: above
+    weight: 10
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  total:
+    label: above
+    weight: 12
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  gst:
+    label: above
+    weight: 11
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+hidden:
+  comments: true
