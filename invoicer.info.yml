@@ -1,12 +1,7 @@
 name: Invoicer
 type: module
 description: Base data structure for Invoices.
-# core: 8.x
+core: 8.x
 package: 'AGERP'
 js:
   js/InvoiceForm.js: {}
-
-# Information added by Drupal.org packaging script on.
-version: '8.x'
-core: '8.x'
-project: 'invoicer'
