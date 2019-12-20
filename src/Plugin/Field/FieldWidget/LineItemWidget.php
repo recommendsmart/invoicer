@@ -27,7 +27,7 @@ class LineItemWidget extends WidgetBase {
       '#type' => 'textfield',
       '#title' => t('Description'),
       '#default_value' => $items->get($delta)->get('item')->getValue(),
-      '#size' => 50,
+      '#size' => 30,
       '#maxlength' => 128,
     ];
 
@@ -48,7 +48,7 @@ class LineItemWidget extends WidgetBase {
     $amount = (!is_null($amount) ? $amount : 0);
     $elements['amount'] = [
       '#type' => 'number',
-      '#title' => t('Amount'),
+      '#title' => t('Unit Price'),
       '#default_value' => $amount,
       '#size' => 4,
       '#scale' => 2,
@@ -77,12 +77,25 @@ class LineItemWidget extends WidgetBase {
       '#attributes' => ['class' => ['gst']],
     ];
 
-    $elements['base_price'] = [
+    $discount = $items->get($delta)->get('discount')->getValue();
+    $discount = (!is_null($discount) ? $discount : 0);
+    $elements['discount'] = [
       '#type' => 'number',
-      '#title' => t('Base price'),
+      '#title' => t('Discount'),
+      '#default_value' => $discount,
+      '#size' => 2,
+      '#scale' => 2,
+      '#step' => 0.01,
+      '#maxlength' => 4,
+      '#attributes' => ['class' => ['quantity']],
+    ];
+
+	$elements['base_price'] = [
+      '#type' => 'number',
+      '#title' => t('Price before Tax'),
       '#default_value' => $quantity * $amount,
       '#step' => 0.01,
-      '#size' => 4,
+      '#size' => 10,
       '#scale' => 2,
       '#maxlength' => 10,
       '#step' => 0.01,
@@ -91,9 +104,9 @@ class LineItemWidget extends WidgetBase {
 
     $elements['total_price'] = [
       '#type' => 'number',
-      '#title' => t('Total price'),
-      '#default_value' => $quantity * $amount * (1 + $gst * (0.01)),
-      '#size' => 4,
+      '#title' => t('Price with Tax/Discount'),
+      '#default_value' => ($quantity * $amount * (1 - $discount * (0.01))) * (1 + $gst * (0.01)),
+      '#size' => 10,
       '#scale' => 2,
       '#step' => 0.01,
       '#maxlength' => 12,
