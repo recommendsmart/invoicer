@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.invoice.field_penalty_rate
+  module:
+    - invoicer
+id: invoice.invoice.field_penalty_rate
+field_name: field_penalty_rate
+entity_type: invoice
+bundle: invoice
+label: 'Penalty rate'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 10
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: '%'
+field_type: integer

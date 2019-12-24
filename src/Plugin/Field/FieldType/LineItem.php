@@ -41,10 +41,6 @@ class LineItem extends FieldItemBase {
           'type' => 'float',
           'not null' => FALSE,
         ],
-		   'discount' => [
-          'type' => 'float',
-          'not null' => FALSE,
-        ],
       ),
     );
   }
@@ -72,9 +68,6 @@ class LineItem extends FieldItemBase {
 
     $properties['gst'] = DataDefinition::create('float')
       ->setLabel(t('Item gst'));
-
-	$properties['discount'] = DataDefinition::create('float')
-      ->setLabel(t('Item discount'));
 
     return $properties;
   }

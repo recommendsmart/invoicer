@@ -41,8 +41,7 @@ class LineItemFormatter extends FormatterBase {
         'quantity' => $item->quantity,
         'amount' => $item->amount,
         'gst' => $item->gst . '%',
-		    'discount' => $item->discount . '%',
-        'base_price' => $base_price,
+		    'base_price' => $base_price,
         'total_price' => $total_price,
       ];
     }
@@ -51,8 +50,7 @@ class LineItemFormatter extends FormatterBase {
       'Quantity',
       'Unit Price',
       'GST',
-	    'Discount',
-      'Price before Tax',
+	    'Price before Tax',
       'Price with Tax',
     ];
     $elements = [

@@ -5,18 +5,18 @@ entity.invoice.collection:
   route_name: entity.invoice.collection
   description: 'List Invoice entities'
   parent: system.admin
-  weight: 100
+  weight: 10
 
 invoice.admin.structure.settings:
   title: Invoice settings
   description: 'Configure Invoice entities'
   route_name: invoice.settings
   parent: entity.invoice.collection
-  weight: 200
+  weight: 20
 
 invoice.admin.config.settings:
   title: Invoicer config
   description: 'Configure Invoicer'
   route_name: invoicer.settings.form
   parent: entity.invoice.collection
-  weight: 300
+  weight: 30

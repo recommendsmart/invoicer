@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.invoice.field_due_date
+  module:
+    - datetime
+    - invoicer
+id: invoice.invoice.field_due_date
+field_name: field_due_date
+entity_type: invoice
+bundle: invoice
+label: 'Due date'
+description: 'Date from which late penalties may be required'
+required: false
+translatable: false
+default_value:
+  -
+    default_date_type: relative
+    default_date: '+30 days'
+default_value_callback: ''
+settings: {  }
+field_type: datetime

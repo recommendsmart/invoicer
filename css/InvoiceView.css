@@ -35,10 +35,17 @@
 }
 
 .sub_total {
+  width: 20%;
+  float: left;
+}
+
+.gst {
+  width: 20%;
   float: left;
 }
 
 .total {
+  width: 20%;
   float: left;
 }
 

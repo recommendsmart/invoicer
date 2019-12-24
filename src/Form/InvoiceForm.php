@@ -179,18 +179,7 @@ class InvoiceForm extends ContentEntityForm {
       $this->entity->number->value = $last_invoice->get('number')->value + 1;
     }
 
-    if ($this->entity->provider_id->value == '') {
-      $this->entity->provider_id->value = $user->field_gst_id->value;
-    }
-    if ($this->entity->provider_name->value == '') {
-      $this->entity->provider_name->value = $user->field_name->value;
-    }
-    if ($this->entity->provider_address->value == '') {
-      $this->entity->provider_address->value = $user->field_address->value;
-    }
-    if ($this->entity->comments->value == '') {
-      $this->entity->comments->value = $user->field_default_comments->value;
-    }
+
   }
 
 }
